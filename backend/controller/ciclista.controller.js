@@ -30,7 +30,7 @@ const cadastrar = async (req,res)=>{
             celular: valores.celular
         })
 
-        res.status(201).json({message: 'Ciclista cadastrados com sucesso!'})
+        res.status(201).json({message: 'Ciclista cadastrado com sucesso!'})
     }catch(err){
         console.error('Erro ao cadastrar o Ciclista',err)
         res.status(500).json({message: 'Erro ao cadastrar o Ciclista'})        

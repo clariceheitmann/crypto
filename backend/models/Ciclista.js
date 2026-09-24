@@ -24,7 +24,7 @@ const Ciclista = db.define('ciclista',{
         type: DataTypes.STRING(100),
         allowNull: false
     },
-    endereço: {
+    endereco: {
         type: DataTypes.STRING(100),
         allowNull: false
     },
