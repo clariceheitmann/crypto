@@ -24,7 +24,7 @@ Content-Type: application/json
     "celular": "47912345678"
 }
 
-### 3. Testar cadastro do ciclista 2
+### 3. Testar cadastro do ciclista  2
 POST http://localhost:3000/ciclista 
 Content-Type: application/json
 
