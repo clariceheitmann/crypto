@@ -11,6 +11,8 @@ const conn = require('./db/conn')
 //require('./models/rel)
 
 const ciclistaController = require('./controller/ciclista.controller')
+const bicicletaController = require('./controller/bicicleta.controller')
+const agendamentoController = require('./controller/agendamento.controller')
 const authController = require('./controller/auth.controller')
 
 //------------ Middleware ------------
@@ -29,7 +31,15 @@ app.get('/', (req,res)=>{
 
 //------------ Rotas Privadas ------------
 
+app.get('/ciclistas', ciclistaController.listar)
+app.get('/ciclista/buscar/:nome', ciclistaController.consultarPorNome)
+app.put('/ciclista/:id', ciclistaController.atualizar)
+app.post('/ciclista/:id', ciclistaController.excluir)
 
+app.post('/bicicleta', bicicletaController.cadastrar)
+
+app.post('/agendamento', agendamentoController.cadastrar)
+app.get('/agendamentos', agendamentoController.listar)
 
 //------------ Sincronizando o servidor com banco de dados ------------
 conn.sync()

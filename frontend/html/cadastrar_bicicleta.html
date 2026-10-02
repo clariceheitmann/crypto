@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_cad.css">
+    <script src="../js/cadastrar_bicicleta.js"defer></script>
+    <title>Cadastro</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>&emsp;
+            <a href="../html/cadastrar_bicicleta.html">Cadastrar</a>&emsp;
+        </nav>
+    </header>
+    <main>
+        <h1>Cadastrar Bicicleta</h1><br>
+        <form>
+            <label for="modelo">Modelo</label><br>
+            <select id="modelo">
+                <option value="">Selecione</option>
+                <option value="TRILHA">Trilha</option>
+                <option value="ESPORTE">Esporte</option>
+            </select><br><br>
+
+            <label for="tipo">Tipo</label><br>
+            <select id="tipo">
+                <option value="">Selecione</option>
+                <option value="MOUNTAIN">Mountain</option>
+                <option value="SPEED">Speed</option>
+            </select><br><br>
+            
+            <label for="aro">Aro:</label><br>
+            <input type="text" id="aro"><br><br>
+            
+            <label for="codCiclista">Ciclista:</label><br>
+            <input type="text" id="codCiclista"><br><br>
+            
+            <button id="btn_cadastrar">Cadastrar</button>
+        </form>
+        <br><br>
+        <div id="resposta_cad_bicicleta"></div>
+    </main>
+</body>
+</html>

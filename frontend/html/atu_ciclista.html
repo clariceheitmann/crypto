@@ -5,18 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style_cad.css">
-    <script src="../js/cadastrar_ciclista.js"defer></script>
-    <title>Cadastro</title>
+    <script src="../js/atualizar_ciclista.js"defer></script>
+    <title>Atualizar</title>
 </head>
 <body>
     <header>
         <nav>
             <a href="../index.html">Home</a>&emsp;
+            <a href="../index.html">Home</a>&emsp;
+            <a href="../html/cad_ciclista.html">Cadastrar</a>&emsp;
+            <a href="../html/listar_ciclista.html">Listar</a>&emsp;
+            <a href="../html/consult_ciclista.html">Consultar</a>&emsp;
+            <a href="../html/atu_ciclista.html">Atualizar</a>&emsp;
+            <a href="../html/apag_ciclista.html">Excluir</a>&emsp;
         </nav>
     </header>
     <main>
-        <h1>Cadastrar Ciclista</h1><br>
+        <h1>Atualizar Ciclista</h1><br>
         <form>
+            <label for="codCiclista">ID do Ciclista:</label><br>
+            <input type="text" id="codCiclista"><br><br>
+
             <label for="nome">Nome:</label><br>
             <input type="text" id="nome"><br><br>
             
@@ -35,10 +44,10 @@
             <label for="celular">Celular:</label><br>
             <input type="text" id="celular"><br><br>
 
-            <button id="btn_cadastrar">Cadastrar</button>
+            <button id="btn_atualizar">Atualizar</button>
         </form>
         <br><br>
-        <div id="resposta_cad_ciclista"></div>
+        <div id="resposta_atu_ciclista"></div>
     </main>
 </body>
 </html>
