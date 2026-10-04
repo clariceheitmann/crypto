@@ -4,6 +4,7 @@ let btn_atualizar = document.getElementById('btn_atualizar')
 btn_atualizar.addEventListener('click', (e) => {
     e.preventDefault()
 
+    let codCiclista = document.getElementById('codCiclista').value
     let nome = document.getElementById('nome').value
     let email = document.getElementById('email').value
     let senha = document.getElementById('senha').value
@@ -31,10 +32,14 @@ btn_atualizar.addEventListener('click', (e) => {
         return res.json()
     })
     .then(dados => {
-        resposta_atu_ciclista.innerHTML = `${dados.message}`
+        if(dados.message){
+            resposta_atu_ciclista.innerHTML = dados.message
+        }else{
+            resposta_atu_ciclista.innerHTML = 'Ciclista atualizado com sucesso!'
+        }
     })
     .catch((err) => {
-        console.error('Erro ao atualizar o usuário', err)
-        resposta_atu_ciclista.innerHTML = `Erro ao atualizar o usuário`
+        console.error('Erro ao atualizar o ciclista', err)
+        resposta_atu_ciclista.innerHTML = 'Erro ao atualizar o ciclista'
     })
 })

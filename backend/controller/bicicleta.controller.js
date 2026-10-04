@@ -4,14 +4,14 @@ const Ciclista = require('../models/Ciclista')
 const cadastrar = async (req, res) => {
     const valores = req.body
 
-    if (!valores.modelo || !valores.tipo || !valores.aro || !valores.codCiclista) {
+    if (!valores.modelo || !valores.tipo || !valores.aro || !valores.idCiclista) {
         return res.status(400).json({
             message: 'Todos os campos são obrigatórios!'
         })
     }
 
     try {
-        const ciclista = await Ciclista.findByPk(valores.codCiclista)
+        const ciclista = await Ciclista.findByPk(valores.idCiclista)
 
         if (!ciclista) {
             return res.status(404).json({
@@ -23,7 +23,7 @@ const cadastrar = async (req, res) => {
             modelo: valores.modelo,
             tipo: valores.tipo,
             aro: valores.aro,
-            codCiclista: valores.codCiclista
+            idCiclista: valores.idCiclista
         })
 
         res.status(201).json({
@@ -38,4 +38,4 @@ const cadastrar = async (req, res) => {
     }
 }
 
-module.exports = {cadastrar}
+module.exports = { cadastrar }

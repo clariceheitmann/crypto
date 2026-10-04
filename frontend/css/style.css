@@ -46,3 +46,20 @@ h2{
     font-size: 1.4rem; 
     font-weight: bold;
 }
+
+table{
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: rgb(153, 89, 47);
+    color: black;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 10px 15px;
+}
+
+th{
+    background-color: rgb(87, 46, 19);
+    color: white;
+}

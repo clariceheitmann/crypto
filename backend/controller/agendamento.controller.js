@@ -29,12 +29,11 @@ const cadastrar = async (req, res) => {
             })
         }
 
-        if (bicicleta.codCiclista != valores.idCiclista) {
+        if (bicicleta.idCiclista != valores.idCiclista) {
             return res.status(400).json({
                 message: 'A bicicleta não pertence ao ciclista informado!'
             })
         }
-
 
         await Agendamento.create({
             data: valores.data,
@@ -42,7 +41,6 @@ const cadastrar = async (req, res) => {
             idCiclista: valores.idCiclista,
             idBicicleta: valores.idBicicleta
         })
-
 
         res.status(201).json({
             message: 'Agendamento realizado com sucesso!'
@@ -65,6 +63,7 @@ const listar = async (req, res) => {
                 ['hora', 'ASC']
             ]
         })
+
         res.status(200).json(dados)
 
     } catch (err) {
@@ -75,4 +74,4 @@ const listar = async (req, res) => {
     }
 }
 
-module.exports = {cadastrar, listar}
+module.exports = { cadastrar, listar }

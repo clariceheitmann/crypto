@@ -34,7 +34,7 @@ app.get('/', (req,res)=>{
 app.get('/ciclistas', ciclistaController.listar)
 app.get('/ciclista/buscar/:nome', ciclistaController.consultarPorNome)
 app.put('/ciclista/:id', ciclistaController.atualizar)
-app.post('/ciclista/:id', ciclistaController.excluir)
+app.delete('/ciclista/:id', ciclistaController.excluir)
 
 app.post('/bicicleta', bicicletaController.cadastrar)
 
